@@ -14,6 +14,9 @@
 		8969752C26CC9660002ACAF5 /* CatalystSwiftUIUnifiedToolbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8969752B26CC9660002ACAF5 /* CatalystSwiftUIUnifiedToolbarTests.swift */; };
 		8969753626CC9660002ACAF5 /* CatalystSwiftUIUnifiedToolbarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8969753526CC9660002ACAF5 /* CatalystSwiftUIUnifiedToolbarUITests.swift */; };
 		8969753826CC9660002ACAF5 /* CatalystSwiftUIUnifiedToolbarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8969753726CC9660002ACAF5 /* CatalystSwiftUIUnifiedToolbarUITestsLaunchTests.swift */; };
+		8969754826CC96FC002ACAF5 /* View+HostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8969754726CC96FC002ACAF5 /* View+HostingView.swift */; };
+		8969754A26CC9717002ACAF5 /* ToolbarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8969754926CC9717002ACAF5 /* ToolbarDelegate.swift */; };
+		8969754C26CC9759002ACAF5 /* InspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8969754B26CC9759002ACAF5 /* InspectorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,12 @@
 		8969753126CC9660002ACAF5 /* CatalystSwiftUIUnifiedToolbarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatalystSwiftUIUnifiedToolbarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8969753526CC9660002ACAF5 /* CatalystSwiftUIUnifiedToolbarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalystSwiftUIUnifiedToolbarUITests.swift; sourceTree = "<group>"; };
 		8969753726CC9660002ACAF5 /* CatalystSwiftUIUnifiedToolbarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalystSwiftUIUnifiedToolbarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8969754426CC9675002ACAF5 /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
+		8969754526CC96BD002ACAF5 /* CatalystSwiftUIUnifiedToolbar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CatalystSwiftUIUnifiedToolbar.entitlements; sourceTree = "<group>"; };
+		8969754726CC96FC002ACAF5 /* View+HostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+HostingView.swift"; sourceTree = "<group>"; };
+		8969754926CC9717002ACAF5 /* ToolbarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarDelegate.swift; sourceTree = "<group>"; };
+		8969754B26CC9759002ACAF5 /* InspectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorView.swift; sourceTree = "<group>"; };
+		8969754D26CC979B002ACAF5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +83,8 @@
 		8969750E26CC965E002ACAF5 = {
 			isa = PBXGroup;
 			children = (
+				8969754D26CC979B002ACAF5 /* README.md */,
+				8969754426CC9675002ACAF5 /* .gitignore.md */,
 				8969751926CC965E002ACAF5 /* CatalystSwiftUIUnifiedToolbar */,
 				8969752A26CC9660002ACAF5 /* CatalystSwiftUIUnifiedToolbarTests */,
 				8969753426CC9660002ACAF5 /* CatalystSwiftUIUnifiedToolbarUITests */,
@@ -94,10 +105,13 @@
 		8969751926CC965E002ACAF5 /* CatalystSwiftUIUnifiedToolbar */ = {
 			isa = PBXGroup;
 			children = (
+				8969754626CC96DC002ACAF5 /* Toolbar */,
 				8969751A26CC965E002ACAF5 /* CatalystSwiftUIUnifiedToolbarApp.swift */,
 				8969751C26CC965E002ACAF5 /* ContentView.swift */,
+				8969754526CC96BD002ACAF5 /* CatalystSwiftUIUnifiedToolbar.entitlements */,
 				8969751E26CC9660002ACAF5 /* Assets.xcassets */,
 				8969752026CC9660002ACAF5 /* Preview Content */,
+				8969754B26CC9759002ACAF5 /* InspectorView.swift */,
 			);
 			path = CatalystSwiftUIUnifiedToolbar;
 			sourceTree = "<group>";
@@ -125,6 +139,15 @@
 				8969753726CC9660002ACAF5 /* CatalystSwiftUIUnifiedToolbarUITestsLaunchTests.swift */,
 			);
 			path = CatalystSwiftUIUnifiedToolbarUITests;
+			sourceTree = "<group>";
+		};
+		8969754626CC96DC002ACAF5 /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				8969754726CC96FC002ACAF5 /* View+HostingView.swift */,
+				8969754926CC9717002ACAF5 /* ToolbarDelegate.swift */,
+			);
+			path = Toolbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8969754826CC96FC002ACAF5 /* View+HostingView.swift in Sources */,
 				8969751D26CC965E002ACAF5 /* ContentView.swift in Sources */,
+				8969754A26CC9717002ACAF5 /* ToolbarDelegate.swift in Sources */,
+				8969754C26CC9759002ACAF5 /* InspectorView.swift in Sources */,
 				8969751B26CC965E002ACAF5 /* CatalystSwiftUIUnifiedToolbarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CatalystSwiftUIUnifiedToolbar/CatalystSwiftUIUnifiedToolbar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CatalystSwiftUIUnifiedToolbar/Preview Content\"";
@@ -427,7 +454,8 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -435,9 +463,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mcorey.CatalystSwiftUIUnifiedToolbar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "2,6";
 			};
 			name = Debug;
 		};
@@ -446,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CatalystSwiftUIUnifiedToolbar/CatalystSwiftUIUnifiedToolbar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CatalystSwiftUIUnifiedToolbar/Preview Content\"";
@@ -457,7 +488,8 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,9 +497,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mcorey.CatalystSwiftUIUnifiedToolbar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "2,6";
 			};
 			name = Release;
 		};

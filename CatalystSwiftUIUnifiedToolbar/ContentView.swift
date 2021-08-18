@@ -8,14 +8,49 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Binding var showInspector: Bool
+    @Binding var showSheet: Bool
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
-}
+        NavigationView {
+            List {
+                Section(header: Text("Sidebar")) {
+                    Label("Item 1", systemImage: "gear")
+                    Label("Item 2", systemImage: "brain")
+                    Label("Item 3", systemImage: "lungs")
+                    Label("Item 4", systemImage: "eyes")
+                }
+            }
+            .navigationBarHidden(true)
+            .listStyle(.sidebar)
+            
+            HStack(spacing: 0) {
+                Text("Content")
+                    .navigationBarHidden(true)
+                    .navigationTitle("Universal Toolbar, with Catalyst and SwiftUI Lifecycle")
+                    .navigationSubtitle("With a Subtitle!")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color(.secondarySystemBackground))
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+            
+                if showInspector {
+                    InspectorView()
+                }
+            }
+        }
+        .sheet(isPresented: $showSheet) {
+            VStack {
+                Text("Sheet!")
+                    .frame(maxHeight: .infinity)
+                
+                Button {
+                    showSheet = false
+                } label: {
+                    Text("Close")
+                }
+                .frame(maxWidth: .infinity, alignment: .trailing)
+            }
+            .padding()
+        }
     }
 }
